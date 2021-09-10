@@ -13,6 +13,11 @@ RUN apt install npm -y
 
 RUN npm install n -g
 
+RUN n latest
+RUN apt purge nodejs npm -y
+RUN apt autoremove
+
+
 
 # install marp
 RUN npm install -g @marp-team/marp-cli
