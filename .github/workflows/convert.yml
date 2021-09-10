@@ -19,8 +19,6 @@ jobs:
         run: |
           cd .devcontainer 
           docker-compose exec -T marp npx @marp-team/marp-cli@latest contents/*.md -y
-          docker-compose exec -T marp npx @marp-team/marp-cli@latest contents/*.md -y --pdf
-          docker-compose exec -T marp npx @marp-team/marp-cli@latest contents/*.md -y --pptx
       - name: Upload Slides
         uses: actions/upload-artifact@v2
         with:
