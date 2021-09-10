@@ -17,4 +17,5 @@ jobs:
           docker-compose -f .devcontainer/docker-compose.yml up -d --build
       - name: Convert md files.
         run: |
-          cd .devcontainer && docker-compose exec marp npx @marp-team/marp-cli@latest contents/*.md
+          cd .devcontainer 
+          docker-compose exec marp npx @marp-team/marp-cli@latest contents/*.md -y
