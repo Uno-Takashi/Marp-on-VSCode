@@ -3,7 +3,7 @@ name: convert-marp
 on:
   push:
     branches:
-      - main
+      - master
       - develop
 
 jobs:
@@ -11,6 +11,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-    - name: SetUp Container
-        run: |
-          docker-compose -f .devcontainer/docker-compose.yml up -d --build
+      - name: SetUp Container
+          run: |
+            docker-compose -f .devcontainer/docker-compose.yml up -d --build
