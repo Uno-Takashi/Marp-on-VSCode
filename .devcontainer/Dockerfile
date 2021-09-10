@@ -5,7 +5,7 @@ WORKDIR /workspaces
 # install nodejs
 RUN apt-get update
 RUN apt install wget gnupg -y
-RUN curl -sL https://deb.nodesource.com/setup_16.x | bash -
+RUN curl -sL https://deb.nodesource.com/setup_16.9.0 | bash -
 RUN apt-get update
 RUN apt install nodejs -y
 RUN apt install npm -y
