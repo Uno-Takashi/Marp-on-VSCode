@@ -1,0 +1,10 @@
+version: '3'
+services:
+  marp:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: 'Marp'
+    tty: true
+    volumes:
+      - ../:/workspaces/
