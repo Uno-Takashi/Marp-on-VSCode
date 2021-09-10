@@ -15,10 +15,14 @@ jobs:
       - name: SetUp Container
         run: |
           docker-compose -f .devcontainer/docker-compose.yml up -d --build
-      - name: Convert md files.
+      - name: Convert md files
         run: |
           cd .devcontainer 
-          docker-compose exec -T marp npx @marp-team/marp-cli@latest contents/*.md -y
-          docker-compose exec -T marp npx @marp-team/marp-cli@latest contents/*.md --pdf -y
-          docker-compose exec -T marp npx @marp-team/marp-cli@latest contents/*.md --pptx -y
-          
+          docker-compose exec -T marp npx @marp-team/marp-cli@latest -I  contents/ -o contents/html -y
+          docker-compose exec -T marp npx @marp-team/marp-cli@latest -I  contents/ -o contents/pdf -y --pdf
+          docker-compose exec -T marp npx @marp-team/marp-cli@latest -I  contents/ -o contents/pptx -y --pptx
+      - name: Upload Slides
+        uses: actions/upload-artifact@v2
+        with:
+          name: pdf slide
+          path: content/pdf
