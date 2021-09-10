@@ -14,9 +14,10 @@
         ]
     },
     "extensions": [
-        "ms-azuretools.vscode-docker",
-        "ms-vsliveshare.vsliveshare",
-        "marp-team.marp-vscode",
-        "mikestead.dotenv"
-    ]
+		"ms-azuretools.vscode-docker",
+		"ms-vsliveshare.vsliveshare",
+		"marp-team.marp-vscode",
+		"mikestead.dotenv",
+		"ecmel.vscode-html-css"
+	]
 }
