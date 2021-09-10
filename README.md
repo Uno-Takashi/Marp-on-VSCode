@@ -52,3 +52,8 @@ The following window will give the same results as above.
 
 ![image](https://user-images.githubusercontent.com/32987034/132096525-3a14e46d-a980-400c-b550-bc8760271289.png)
 
+
+
+```
+npx @marp-team/marp-cli@latest -I contents/ -o contents/html --theme-set $(find themes | grep .css) -y 
+```
