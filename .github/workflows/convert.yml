@@ -17,6 +17,4 @@ jobs:
           docker-compose -f .devcontainer/docker-compose.yml up -d --build
       - name: Convert md files.
         run: |
-          docker-compose exec marp npx @marp-team/marp-cli@latest contents/*.md
-          docker-compose exec marp npx @marp-team/marp-cli@latest contents/*.md --pdf
-          docker-compose exec marp npx @marp-team/marp-cli@latest contents/*.md --pptx
+          cd .devcontainer && docker-compose exec marp npx @marp-team/marp-cli@latest contents/*.md
