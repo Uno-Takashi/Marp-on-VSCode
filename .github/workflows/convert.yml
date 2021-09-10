@@ -28,7 +28,7 @@ jobs:
       - name: Convert md to pdf
         run: |
           ls -a
-          docker run --rm --init -e MARP_USER="$(id -u):$(id -g)" -v $PWD:/home/marp/app  marpteam/marp-cli -I contents/ -o contents/pdf --theme-set $(find themes | grep .css) --pdf
+          docker run --rm --init --env-file=["$PWD"/.devcontainer/.env] -e MARP_USER="$(id -u):$(id -g)" -v $PWD:/home/marp/app  marpteam/marp-cli -I contents/ -o contents/pdf --theme-set $(find themes | grep .css) --pdf
       - name: Upload pdf Slides
         uses: actions/upload-artifact@v2
         with:
