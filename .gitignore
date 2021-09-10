@@ -1,6 +1,7 @@
 # converted files
-.html
-.pdf
+*.html
+*.pdf
+*.pptx
 
 # Logs
 logs
