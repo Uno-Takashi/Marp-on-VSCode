@@ -16,7 +16,7 @@ jobs:
       - name: SetUp Container
         run: |
           docker-compose -f .devcontainer/docker-compose.yml up -d --build
-      - name: Convert md files
+      - name: Convert md to html
         run: |
           cd .devcontainer 
           docker-compose exec -T marp npx @marp-team/marp-cli@latest -I contents/ -o contents/html --theme-set $(find themes | grep .css) -y 
@@ -25,7 +25,7 @@ jobs:
         with:
           name: html-slide
           path: contents/html
-      - name: Convert md files
+      - name: Convert md to pdf
         run: |
           ls -a
           docker run --rm --init -e MARP_USER="$(id -u):$(id -g)" -v $PWD:/home/marp/app  marpteam/marp-cli -I contents/ -o contents/pdf --theme-set $(find themes | grep .css) --pdf
@@ -34,3 +34,12 @@ jobs:
         with:
           name: pdf-slide
           path: contents/pdf
+      - name: Convert md to pptx
+        run: |
+          ls -a
+          docker run --rm --init -e MARP_USER="$(id -u):$(id -g)" -v $PWD:/home/marp/app  marpteam/marp-cli -I contents/ -o contents/pptx --theme-set $(find themes | grep .css) --pptx
+      - name: Upload pptx Slides
+        uses: actions/upload-artifact@v2
+        with:
+          name: pptx-slide
+          path: contents/pptx
