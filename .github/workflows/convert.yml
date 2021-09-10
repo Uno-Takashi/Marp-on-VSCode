@@ -5,6 +5,7 @@ on:
     branches:
       - master
       - develop
+      - works/*
 
 jobs:
   build:
@@ -18,9 +19,9 @@ jobs:
       - name: Convert md files
         run: |
           cd .devcontainer 
-          docker-compose exec -T marp npx @marp-team/marp-cli@latest -I contents/ -o contents/html -y
+          docker-compose exec -T marp npx @marp-team/marp-cli@latest -I contents/ -o contents/html --theme-set $(find themes | grep .css) -y 
       - name: Upload Slides
         uses: actions/upload-artifact@v2
         with:
-          name: html slide
+          name: html-slide
           path: contents/html

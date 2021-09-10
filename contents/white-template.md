@@ -1,7 +1,7 @@
 ---
 marp: true
-theme: dark
-header: dark
+theme: white
+header: white
 footer: Footer
 ---
 

@@ -10,12 +10,13 @@
         "editor.formatOnPaste": true,
         "markdown.marp.themes": [
             "themes/dark/dark.css",
+            "themes/white/white.css"
         ]
     },
     "extensions": [
-		"ms-azuretools.vscode-docker",
-		"ms-vsliveshare.vsliveshare",
-		"marp-team.marp-vscode",
-		"mikestead.dotenv"
-	]
+        "ms-azuretools.vscode-docker",
+        "ms-vsliveshare.vsliveshare",
+        "marp-team.marp-vscode",
+        "mikestead.dotenv"
+    ]
 }

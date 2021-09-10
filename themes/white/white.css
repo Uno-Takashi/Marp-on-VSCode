@@ -1,11 +1,5 @@
-/* @theme dark */
+/* @theme white */
 
-/*
-color pallet
-https://colorhunt.co/palette/171717444444da0037ededed
-*/
-
-@charset "UTF-8";
 @import 'default';
 
 section {
@@ -13,7 +7,7 @@ section {
 	height: 1080px;
 	font-size: 40px;
 	padding: 40px;
-	background-color: #171717;
+	background-image: url(./logo.png);
 	background-repeat: no-repeat;
 	background-position: right top;
 }
@@ -21,15 +15,15 @@ section {
 header {
 	width: 100%;
 	padding: 1px;
-	color: rgb(152, 196, 183);
-	background: linear-gradient(to right, rgb(42, 173, 134), white);
+	color: rgb(0, 0, 0);
+	background: linear-gradient(to right, rgb(39, 38, 38), white);
 	top: 120px;
 }
 
 footer {
 	width: 100%;
 	background-color: silver;
-	color: black;
+	color: rgb(61, 51, 51);
 	text-align: left;
 	padding: 15px;
 	font-style: oblique;
@@ -37,9 +31,5 @@ footer {
 
 h1 {
 	font-size: 90px;
-	color: #EDEDED;
-}
-
-section.cover > h1 {
-	text-align: center;
+	color: #09c;
 }
