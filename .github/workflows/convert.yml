@@ -19,7 +19,6 @@ jobs:
       - name: Convert md to html
         run: |
           cd .devcontainer 
-        #  docker-compose exec -T marp npx @marp-team/marp-cli@latest -I contents/ -o contents/html --theme-set $(find themes | grep .css) -y 
           docker run --rm --init --env-file .devcontainer/.env -e MARP_USER="$(id -u):$(id -g)" -v $PWD:/home/marp/app  marpteam/marp-cli -I contents/ -o contents/html --theme-set $(find themes | grep .css)
       - name: Upload HTML Slides
         uses: actions/upload-artifact@v2
