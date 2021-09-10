@@ -15,7 +15,7 @@ RUN npm install n -g
 
 RUN n latest
 RUN apt purge nodejs npm -y
-RUN apt autoremove
+RUN apt autoremove -y
 
 
 
