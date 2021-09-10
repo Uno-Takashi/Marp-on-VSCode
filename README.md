@@ -1,4 +1,4 @@
-# ReScript on VSCode Remote Container
+# Marp on VSCode Remote Container
 
 ## Getting Start
 
