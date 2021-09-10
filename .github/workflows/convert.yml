@@ -37,7 +37,7 @@ jobs:
       - name: Convert md to pptx
         run: |
           ls -a
-          docker run --rm --init -e MARP_USER="$(id -u):$(id -g)" -v $PWD:/home/marp/app  marpteam/marp-cli -I contents/ -o contents/pptx --theme-set $(find themes | grep .css) --pptx
+          docker run --rm --init --env-file .devcontainer/.env -e MARP_USER="$(id -u):$(id -g)" -v $PWD:/home/marp/app  marpteam/marp-cli -I contents/ -o contents/pptx --theme-set $(find themes | grep .css) --pptx
       - name: Upload pptx Slides
         uses: actions/upload-artifact@v2
         with:
