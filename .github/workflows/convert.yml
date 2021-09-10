@@ -28,4 +28,4 @@ jobs:
       - name: Convert md files
         run: |
           ls -a
-          docker run --rm --init -v $PWD:/home/marp/app  marpteam/marp-cli contents/*.md --pdf
+          docker run --rm --init -e MARP_USER="$(id -u):$(id -g)" -v $PWD:/home/marp/app  marpteam/marp-cli contents/*.md --pdf
