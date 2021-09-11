@@ -3,6 +3,7 @@ marp: true
 theme: dark
 header: 
 footer: dark
+author: U-NOT
 ---
 
 <!-- _class: cover -->
