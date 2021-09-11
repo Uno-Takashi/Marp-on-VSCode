@@ -11,28 +11,17 @@ https://colorhunt.co/palette/171717444444da0037ededed
 section {
 	width: 1920px;
 	height: 1080px;
-	font-size: 40px;
-	padding: 40px;
+	font-size: 62px;
+	padding: 62px;
 	background-color: #171717;
-	background-repeat: no-repeat;
-	background-position: right top;
 }
 
 header {
-	width: 100%;
-	padding: 1px;
-	color: rgb(152, 196, 183);
-	background: linear-gradient(to right, rgb(42, 173, 134), white);
-	top: 120px;
+
 }
 
 footer {
-	width: 100%;
-	background-color: silver;
-	color: black;
-	text-align: left;
-	padding: 15px;
-	font-style: oblique;
+
 }
 
 h1 {
@@ -40,6 +29,64 @@ h1 {
 	color: #EDEDED;
 }
 
+section.cover{
+  position: relative;
+  text-align: center;
+  
+}
+
 section.cover > h1 {
-	text-align: center;
+  font-size: 84px;
+}
+
+section.cover > h2 {
+  font-size: 36px;
+  color: #EDEDED;
+  width: 100%;
+  margin-top: 10px;
+  display:block;
+  text-align: center;
+  letter-spacing: 8px;
+  margin-bottom: 100px;
+}
+
+
+section.cover > h2:before{
+  content:" - ";
+}
+ 
+section.cover > h2:after{
+  content:" - ";
+}
+
+section.cover > h3 , h4 {
+  font-size: 36px;
+  color: #DA0037;
+  display:block;
+  text-align: center;
+  margin-top: 0px;
+}
+section.cover > h3  {
+  font-size: 36px;
+  color: #DA0037;
+}
+section.cover > h4  {
+  margin-top: 30px;
+  font-size: 24px;
+  color: #aaaaaa;
+}
+
+section.backcover{
+  position: relative;
+  text-align: center;
+  
+}
+
+section.backcover > h1 {
+  font-size: 72px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  color: #DA0037;
 }

@@ -1,14 +1,24 @@
 ---
 marp: true
 theme: dark
-header: dark
+header: 
 footer: dark
 ---
 
 <!-- _class: cover -->
 
-# タイトル
+# Presentation Title
+##  Subtitle
+
+### Presentor
+#### Your Company
 
 ---
 
-# タイトル
+# Page Title
+
+---
+
+<!-- _class: backcover -->
+
+# Thank you for listening
